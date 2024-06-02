@@ -34,8 +34,8 @@ def chatify(x):
     return message_with_chat_template
 
 def test_vllm_generation():
-    chatify("Hi how are you today")
-    res = llm.generate(inputs, sp)
+    message_with_chat_template = chatify("Hi how are you today")
+    res = llm.generate(message_with_chat_template, sp)
     print(res)
     
 test_vllm_generation()
